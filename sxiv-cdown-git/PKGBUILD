@@ -5,10 +5,10 @@
 # Contributor: Bastien Dejean <baskerville@lavabit.com>
 
 _name=sxiv
-pkgname="${_name}-cdown-git"
+pkgname="${_name}-photoorg-git"
 pkgver=0.r755.4772390
 pkgrel=1
-pkgdesc="Simple X Image Viewer, cdown personalisations"
+pkgdesc="Simple X Image Viewer, with personalisations to use as a photo organiser"
 arch=('i686' 'x86_64')
 url="https://github.com/cdown/${_name}"
 license=('GPL2')

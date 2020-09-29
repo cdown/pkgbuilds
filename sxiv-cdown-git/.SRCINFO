@@ -1,5 +1,5 @@
-pkgbase = sxiv-cdown-git
-	pkgdesc = Simple X Image Viewer, cdown personalisations
+pkgbase = sxiv-photoorg-git
+	pkgdesc = Simple X Image Viewer, with personalisations to use as a photo organiser
 	pkgver = 0.r755.4772390
 	pkgrel = 1
 	url = https://github.com/cdown/sxiv
@@ -16,5 +16,5 @@ pkgbase = sxiv-cdown-git
 	source = sxiv::git+https://github.com/cdown/sxiv.git
 	sha256sums = SKIP
 
-pkgname = sxiv-cdown-git
+pkgname = sxiv-photoorg-git
 
