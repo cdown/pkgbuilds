@@ -110,6 +110,8 @@ build() {
     -Drpmmacrosdir=no
     -Dsysvinit-path=
     -Dsysvrcnd-path=
+    -Dremote=false
+    -Dmicrohttpd=false
   )
 
   arch-meson "$_pkgbase" build "${_meson_options[@]}"
