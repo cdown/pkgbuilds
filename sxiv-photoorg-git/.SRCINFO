@@ -1,5 +1,5 @@
 pkgbase = sxiv-photoorg-git
-	pkgdesc = Simple X Image Viewer, with personalisations to use as a photo organiser
+	pkgdesc = Simple X Image Viewer, photo organiser version
 	pkgver = 0.r755.4772390
 	pkgrel = 1
 	url = https://github.com/cdown/sxiv
