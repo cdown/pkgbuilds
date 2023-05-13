@@ -57,7 +57,7 @@ mkdir -p .patches
 # Commit log of aur-mirror subfolder
 if [[ ! -f ".patches/${package}.log" ]]; then
     msg "Downloading commit log..."
-    wget -O .patches/${package}.log "http://pkgbuild.com/git/aur-mirror.git/log/${package}"
+    curl -o .patches/${package}.log "http://pkgbuild.com/git/aur-mirror.git/log/${package}"
 fi
 # These are the commit hashes.
 sed -nr 's@.*aur-mirror\.git/commit/'${package}'\?id=([a-z0-9]+).*@\1@p' .patches/${package}.log | tac > .patches/${package}.commits
@@ -69,7 +69,7 @@ while read commit; do
     patchnum="$(printf "%04d" ${number})"
     if [[ ! -f .patches/${patchnum}-${package}.patch ]]; then
         msg "Downloading ${package} patch #${number}..."
-        wget -O .patches/${patchnum}-${package}.patch "http://pkgbuild.com/git/aur-mirror.git/patch/${package}?id=${commit}"
+        curl -o .patches/${patchnum}-${package}.patch "http://pkgbuild.com/git/aur-mirror.git/patch/${package}?id=${commit}"
     fi
 done < .patches/${package}.commits
 
@@ -80,7 +80,7 @@ git am patches/*-${package}.patch
 msg "Finished importing from aur-mirror."
 
 msg "Running filter-tree to add .SRCINFO files and cleanup .AURINFO ..."
-git filter-branch \
+FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch \
     --original refs/pre-import-${package} \
     --tree-filter 'mksrcinfo -o '${package}'/.SRCINFO '${package}'/PKGBUILD; rm -f '${package}'/.AURINFO' \
     --msg-filter 'echo "Imported old history from aur-mirror:"; cat; echo -e "\nfilter-branch: add .SRCINFO"' \
