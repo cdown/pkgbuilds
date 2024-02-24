@@ -1,4 +1,4 @@
-pkgbase = st-xresources-git
+pkgbase = st-xres-git
 	pkgdesc = st with xresources patch applied
 	pkgver = 0.r1167.9dd13f2
 	pkgrel = 1
@@ -12,4 +12,4 @@ pkgbase = st-xresources-git
 	source = git+https://github.com/cdown/st.git
 	md5sums = SKIP
 
-pkgname = st-xresources-git
+pkgname = st-xres-git

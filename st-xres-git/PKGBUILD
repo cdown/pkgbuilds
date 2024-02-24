@@ -1,6 +1,6 @@
 # Maintainer: Chris Down <chris@chrisdown.name>
 
-pkgname=st-xresources-git
+pkgname=st-xres-git
 _gitname=st
 pkgver=0.r1167.9dd13f2
 pkgrel=1
