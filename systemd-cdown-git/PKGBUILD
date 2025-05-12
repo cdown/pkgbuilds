@@ -25,7 +25,7 @@ makedepends=('acl' 'cryptsetup' 'docbook-xsl' 'gperf' 'lz4' 'xz' 'pam' 'libelf'
              'libpwquality' 'qrencode' 'lib32-gcc-libs' 'python-pefile')
 conflicts=("mkinitcpio<38-1")
 options=('!strip')
-source=("$pkgbase-stable::git+https://github.com/systemd/systemd"
+source=("$pkgbase-stable::git+https://github.com/cdown/systemd#commit=37f3604e8369667ce64b295e5605712e495d2e3a"
         '0001-Use-Arch-Linux-device-access-groups.patch'
         # bootloader files
         'arch.conf'

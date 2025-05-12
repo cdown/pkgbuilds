@@ -55,7 +55,7 @@ pkgbase = systemd-cdown-git
 	makedepends = python-pefile
 	conflicts = mkinitcpio<38-1
 	options = !strip
-	source = systemd-cdown-git-stable::git+https://github.com/systemd/systemd
+	source = systemd-cdown-git-stable::git+https://github.com/cdown/systemd#commit=37f3604e8369667ce64b295e5605712e495d2e3a
 	source = 0001-Use-Arch-Linux-device-access-groups.patch
 	source = arch.conf
 	source = loader.conf
