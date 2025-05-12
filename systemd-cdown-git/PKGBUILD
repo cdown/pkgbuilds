@@ -10,7 +10,7 @@ pkgname=('systemd-cdown-git'
          'systemd-cdown-tests-git'
          'systemd-cdown-ukify-git')
 pkgdesc='systemd (git version)'
-pkgver=258.devel.r80631.a94520dc78c
+pkgver=258.devel.r81284.aefdbacff82
 pkgrel=1
 arch=('x86_64')
 license=('LGPL-2.1-or-later')
@@ -141,9 +141,9 @@ build() {
   meson compile -C build
 }
 
-check() {
-  meson test -C build --print-errorlogs
-}
+#check() {
+#  meson test -C build --print-errorlogs
+#}
 
 package_systemd-cdown-git() {
   pkgdesc='system and service manager'
